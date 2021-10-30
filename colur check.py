@@ -7,11 +7,11 @@ import tkinter
 import random
 
 #the list of possible colour.
-colours = ['Red','Blue','Green','Pink','Black','Yellow','Orange','White','Purple','Brown']
+colours = ['Red','Blue','Green','Pink','Black','Yellow','Orange','White','Purple','Brown','lightgreen',"lightred',"lightblue"]
 #the player's score, initially 0.
 score=0
 #the game time left, initially 30 seconds.
-timeleft=30
+timeleft=60
 
 #a function that will start the game.
 def startGame(event):
@@ -23,6 +23,15 @@ def startGame(event):
         
     #run the function to choose the next colour.
     nextColour()
+           
+from tkinter import *
+master = Tk()
+var1 = IntVar()
+Checkbutton(master, text='male', variable=var1).grid(row=0, sticky=W)
+var2 = IntVar()
+Checkbutton(master, text='female', variable=var2).grid(row=1, sticky=W)
+mainloop()
+
 
 #function to choose and display the next colour.
 def nextColour():
@@ -71,6 +80,14 @@ def countdown():
 root = tkinter.Tk()
 #set the title.
 root.title("TTCANTW")
+redbutton.pack( side = LEFT)
+greenbutton = Button(frame, text = 'Brown', fg='brown')
+greenbutton.pack( side = LEFT )
+bluebutton = Button(frame, text ='Blue', fg ='blue')
+bluebutton.pack( side = LEFT )
+blackbutton = Button(bottomframe, text ='Black', fg ='black')
+blackbutton.pack( side = BOTTOM)
+root.mainloop()
 #set the size.
 root.geometry("375x200")
 
